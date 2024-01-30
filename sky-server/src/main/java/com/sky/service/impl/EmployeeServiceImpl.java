@@ -77,13 +77,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         BeanUtils.copyProperties(employeeDTO, employee);
 
         employee.setStatus(StatusConstant.ENABLE); // 状态设置
-        employee.setCreateTime(LocalDateTime.now()); // 设置创建时间
-        employee.setUpdateTime(LocalDateTime.now()); // 设置修改时间
         employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes())); // 设置初始密码
-
-        // 设置记录创建人和更新人的id
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
 
         // 调用dao层
         employeeMapper.insert(employee);
@@ -140,8 +134,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void update(EmployeeDTO employeeDTO) {
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDTO, employee);
-        employee.setUpdateTime(LocalDateTime.now());
-        employee.setUpdateUser(BaseContext.getCurrentId());
 
         employeeMapper.update(employee);
     }
