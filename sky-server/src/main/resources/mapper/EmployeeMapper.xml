@@ -6,31 +6,31 @@
         update employee
         <set>
             <if test="name != null and name != ''">
-                name = #{name}
+                name = #{name},
             </if>
             <if test="username != null and username != ''">
-                username = #{username}
+                username = #{username},
             </if>
             <if test="password != null and password != ''">
-                password = #{password}
+                password = #{password},
             </if>
             <if test="phone != null and phone != ''">
-                phone = #{phone}
+                phone = #{phone},
             </if>
             <if test="sex != null and sex != ''">
-                sex = #{sex}
+                sex = #{sex},
             </if>
             <if test="idNumber != null and idNumber != ''">
-                id_Number = #{idNumber}
+                id_Number = #{idNumber},
             </if>
             <if test="status != null">
-                status = #{status}
+                status = #{status},
             </if>
             <if test="updateTime != null">
-                update_Time = #{updateTime}
+                update_Time = #{updateTime},
             </if>
             <if test="updateUser != null">
-                update_User = #{updateUser}
+                update_User = #{updateUser},
             </if>
         </set>
         where id = #{id}
