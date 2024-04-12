@@ -18,6 +18,7 @@ import java.time.LocalDateTime;
 
 /**
  * 自定义切面，实现公共字段自动填充
+ * @author Yonagi
  */
 
 @Aspect

@@ -6,8 +6,6 @@ sky:
     database: sky_take_out
     username: root
     password: 20040401
-  alioss:
-    endpoint: oss-cn-guangzhou.aliyuncs.com
-    access-key-id: LTAI5tAqnNbTWcspmdZczxua
-    access-key-secret: HdNP3Q6cCjGPXIJ9JehRuyGykAW3cr
-    bucket-name: xyz-yonagi-tlias
+  redis:
+    host: localhost
+    port: 6379
